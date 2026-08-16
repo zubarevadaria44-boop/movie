@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ["latin", "cyrillic"], variable: "--font-body" })
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
 
 export const metadata: Metadata = {
-  title: "Кино | movies",
-  description: "Онлайн-кинотеатр",
+  title: "Cinema | movies",
+  description: "Online movie",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

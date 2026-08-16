@@ -25,7 +25,7 @@ export default function AdminLoginPage() {
     setLoading(false);
 
     if (res?.error) {
-      setError("Неверный логин или пароль");
+      setError("Invalid username or password");
       return;
     }
 
@@ -39,9 +39,9 @@ export default function AdminLoginPage() {
         onSubmit={handleSubmit}
         className="w-full max-w-sm bg-[#1B1E2A] border border-[#2A2E3E] rounded-sm p-8"
       >
-        <h1 className="font-display text-3xl text-[#E8A33D] mb-6">Вход в админку</h1>
+        <h1 className="font-display text-3xl text-[#E8A33D] mb-6">Admin Login </h1>
 
-        <label className="block text-sm text-[#8B90A0] mb-1">Логин</label>
+        <label className="block text-sm text-[#8B90A0] mb-1">Username</label>
         <input
           type="text"
           value={username}
@@ -50,7 +50,7 @@ export default function AdminLoginPage() {
           className="w-full bg-[#12141C] border border-[#2A2E3E] rounded-sm px-3 py-2 mb-4 outline-none focus:border-[#E8A33D]"
         />
 
-        <label className="block text-sm text-[#8B90A0] mb-1">Пароль</label>
+        <label className="block text-sm text-[#8B90A0] mb-1">Password</label>
         <input
           type="password"
           value={password}
@@ -66,7 +66,7 @@ export default function AdminLoginPage() {
           disabled={loading}
           className="w-full bg-[#E8A33D] text-[#12141C] font-bold py-2 rounded-sm hover:opacity-90 transition-opacity disabled:opacity-50"
         >
-          {loading ? "Входим..." : "Войти"}
+          {loading ? "Logging in..." : "Login"}
         </button>
       </form>
     </main>

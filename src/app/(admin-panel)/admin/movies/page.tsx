@@ -33,27 +33,27 @@ export default function AdminMoviesPage() {
     loadMovies();
   }
 
-  if (loading) return <p className="text-[#8B90A0]">Загрузка...</p>;
+  if (loading) return <p className="text-[#8B90A0]">Loading...</p>;
 
   return (
     <div>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="font-display text-3xl">Фильмы</h1>
+        <h1 className="font-display text-3xl">Movies</h1>
         <Link
           href="/admin/movies/new"
           className="bg-[#E8A33D] text-[#12141C] font-bold px-4 py-2 rounded-sm text-sm hover:opacity-90"
         >
-          + Добавить фильм
+          + Add Movie
         </Link>
       </div>
 
       <table className="w-full text-sm">
         <thead>
           <tr className="text-left text-[#8B90A0] border-b border-[#2A2E3E]">
-            <th className="py-2">Название</th>
-            <th className="py-2">Год</th>
-            <th className="py-2">Рейтинг</th>
-            <th className="py-2">Просмотры</th>
+            <th className="py-2">Title</th>
+            <th className="py-2">Year</th>
+            <th className="py-2">Rating</th>
+            <th className="py-2">Views</th>
             <th className="py-2"></th>
           </tr>
         </thead>
@@ -66,10 +66,10 @@ export default function AdminMoviesPage() {
               <td className="py-3 font-mono">{movie.views}</td>
               <td className="py-3 text-right space-x-3">
                 <Link href={`/admin/movies/${movie._id}`} className="text-[#E8A33D] hover:underline">
-                  Редактировать
+                  Edit
                 </Link>
                 <button onClick={() => handleDelete(movie._id)} className="text-[#B33A3A] hover:underline">
-                  Удалить
+                  Delete
                 </button>
               </td>
             </tr>
@@ -78,7 +78,7 @@ export default function AdminMoviesPage() {
       </table>
 
       {movies.length === 0 && (
-        <p className="text-[#8B90A0] mt-8 text-center">Пока нет фильмов. Добавь первый.</p>
+        <p className="text-[#8B90A0] mt-8 text-center">No movies yet. Add the first one.</p>
       )}
     </div>
   );

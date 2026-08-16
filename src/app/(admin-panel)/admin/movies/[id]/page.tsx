@@ -7,11 +7,11 @@ export default async function EditMoviePage({ params }: { params: Promise<{ id: 
   const { id } = await params;
   const movie = await Movie.findById(id).lean();
 
-  if (!movie) return <p>Фильм не найден</p>;
+  if (!movie) return <p>Movie not found</p>;
 
   return (
     <div>
-      <h1 className="font-display text-3xl mb-6">Редактировать: {movie.title}</h1>
+      <h1 className="font-display text-3xl mb-6">Edit: {movie.title}</h1>
       <MovieForm
         movieId={id}
         initialData={{

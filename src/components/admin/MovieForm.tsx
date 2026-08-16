@@ -76,18 +76,18 @@ export function MovieForm({
   return (
     <form onSubmit={handleSubmit} className="max-w-xl space-y-4">
       <div>
-        <label className={labelClass}>Название</label>
+        <label className={labelClass}>Title</label>
         <input className={inputClass} value={form.title} onChange={(e) => update("title", e.target.value)} required />
       </div>
 
       <div>
-        <label className={labelClass}>Slug (для URL)</label>
+        <label className={labelClass}>Slug (for URL)</label>
         <input className={inputClass} value={form.slug} onChange={(e) => update("slug", e.target.value)} required />
       </div>
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className={labelClass}>Год</label>
+          <label className={labelClass}>Year</label>
           <input
             type="number"
             className={inputClass}
@@ -97,7 +97,7 @@ export function MovieForm({
           />
         </div>
         <div>
-          <label className={labelClass}>Хронометраж (мин)</label>
+          <label className={labelClass}>Runtime (minutes)</label>
           <input
             type="number"
             className={inputClass}
@@ -109,22 +109,22 @@ export function MovieForm({
       </div>
 
       <div>
-        <label className={labelClass}>Жанры (через запятую)</label>
+        <label className={labelClass}>Genres (comma-separated)</label>
         <input className={inputClass} value={form.genres} onChange={(e) => update("genres", e.target.value)} />
       </div>
 
       <div>
-        <label className={labelClass}>Ссылка на постер</label>
+        <label className={labelClass}>Poster URL</label>
         <input className={inputClass} value={form.posterUrl} onChange={(e) => update("posterUrl", e.target.value)} required />
       </div>
 
       <div>
-        <label className={labelClass}>Ссылка на видео</label>
+        <label className={labelClass}>Video URL</label>
         <input className={inputClass} value={form.videoUrl} onChange={(e) => update("videoUrl", e.target.value)} required />
       </div>
 
       <div>
-        <label className={labelClass}>Описание</label>
+        <label className={labelClass}>Description</label>
         <textarea
           className={inputClass}
           rows={4}
@@ -138,7 +138,7 @@ export function MovieForm({
         disabled={saving}
         className="bg-[#E8A33D] text-[#12141C] font-bold px-6 py-2 rounded-sm hover:opacity-90 disabled:opacity-50"
       >
-        {saving ? "Сохраняем..." : "Сохранить"}
+        {saving ? "Saving..." : "Save"}
       </button>
     </form>
   );

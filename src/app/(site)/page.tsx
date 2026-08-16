@@ -7,7 +7,7 @@ export default async function Home() {
   await connectDB();
   const movies = await Movie.find().sort({ createdAt: -1 }).lean();
 
-  const nowShowing = movies.map((m) => m.title).join("   ★   ") || "Скоро здесь появятся фильмы";
+  const nowShowing = movies.map((m) => m.title).join("   ★   ") || "Movies coming soon";
 
   return (
     <main>
@@ -19,7 +19,7 @@ export default async function Home() {
       <div className="film-perf h-2" />
 
       <section className="px-4 py-8">
-        <h1 className="font-display text-4xl mb-6">Сейчас в прокате</h1>
+        <h1 className="font-display text-4xl mb-6">Now Showing</h1>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {movies.map((movie) => (
             <MovieCard
@@ -39,7 +39,7 @@ export default async function Home() {
           ))}
         </div>
         {movies.length === 0 && (
-          <p className="text-[#8B90A0] text-center mt-12">Фильмов пока нет — добавь первый в админке.</p>
+          <p className="text-[#8B90A0] text-center mt-12">No movies available — add the first one in the admin panel.</p>
         )}
       </section>
     </main>

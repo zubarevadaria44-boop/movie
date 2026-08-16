@@ -19,12 +19,12 @@ export default async function MoviePage({ params }: { params: Promise<{ slug: st
         poster={movie.posterUrl}
       >
         <source src={movie.videoUrl} />
-        Ваш браузер не поддерживает видео.
+        Your browser does not support the video tag.
       </video>
 
       <h1 className="font-display text-4xl mb-2">{movie.title}</h1>
       <p className="font-mono text-sm text-[#8B90A0] mb-4">
-        {movie.year} · {movie.runtimeMin} мин · {movie.genres.join(", ")} · ★ {movie.rating.toFixed(1)}
+        {movie.year} · {movie.runtimeMin} mins · {movie.genres.join(", ")} · ★ {movie.rating.toFixed(1)}
       </p>
 
       {movie.synopsis && <p className="text-[#F2EFEA] leading-relaxed">{movie.synopsis}</p>}
