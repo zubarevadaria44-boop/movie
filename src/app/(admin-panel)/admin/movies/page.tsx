@@ -1,4 +1,3 @@
-// src/app/(admin-panel)/admin/movies/page.tsx
 "use client";
 
 import { useEffect, useState } from "react";

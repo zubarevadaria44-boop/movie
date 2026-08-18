@@ -1,4 +1,3 @@
-// src/app/(site)/page.tsx
 import { MovieCard } from "@/components/MovieCard";
 import { connectDB } from "@/lib/db";
 import { Movie } from "@/models/Movie";

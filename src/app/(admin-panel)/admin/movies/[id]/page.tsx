@@ -1,4 +1,3 @@
-// src/app/(admin-panel)/admin/movies/[id]/page.tsx
 import { connectDB } from "@/lib/db";
 import { Movie } from "@/models/Movie";
 import { MovieForm } from "@/components/admin/MovieForm";

@@ -1,4 +1,3 @@
-// src/lib/mock-movies.ts
 import { Movie } from "./types";
 
 export const mockMovies: Movie[] = [

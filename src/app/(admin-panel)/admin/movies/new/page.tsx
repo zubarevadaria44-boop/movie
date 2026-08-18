@@ -1,4 +1,3 @@
-// src/app/(admin-panel)/admin/movies/new/page.tsx
 import { MovieForm } from "@/components/admin/MovieForm";
 
 export default function NewMoviePage() {

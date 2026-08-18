@@ -1,4 +1,3 @@
-// src/models/Movie.ts
 import mongoose, { Schema, models } from "mongoose";
 
 const MovieSchema = new Schema(

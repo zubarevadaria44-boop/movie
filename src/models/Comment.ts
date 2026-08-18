@@ -1,4 +1,3 @@
-// src/models/Comment.ts
 import mongoose, { Schema, models } from "mongoose";
 
 const CommentSchema = new Schema(

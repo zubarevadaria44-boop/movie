@@ -1,4 +1,3 @@
-// src/components/MovieCard.tsx
 import Image from "next/image";
 import Link from "next/link";
 import { Movie } from "@/lib/types";

@@ -1,4 +1,3 @@
-// src/app/(site)/movies/[slug]/page.tsx
 import { connectDB } from "@/lib/db";
 import { Movie } from "@/models/Movie";
 import { notFound } from "next/navigation";

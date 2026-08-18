@@ -1,4 +1,3 @@
-// src/components/admin/MovieForm.tsx
 "use client";
 
 import { useState } from "react";
